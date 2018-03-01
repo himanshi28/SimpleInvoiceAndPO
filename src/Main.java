@@ -5,7 +5,7 @@ public class Main implements Financials {
 	public static void main(String[] args) {
 
 		Scanner reader = new Scanner(System.in);
-		Financials financials = new Main();
+		Financials financials = new Main(); // Interface object
 		Client client = new Client();
 
 		System.out.println("Enter the client name:");
@@ -17,6 +17,8 @@ public class Main implements Financials {
 		int count = 0;
 		while (count < numItems) {
 
+			// Creates a new object of type Item in each element of ArrayList during each
+			// iteration
 			client.items.add(new Item());
 
 			System.out.println("Enter description of item #" + (count + 1) + ":");
@@ -46,9 +48,12 @@ public class Main implements Financials {
 
 	}
 
+	// Interface method
+	final double HST = 0.15;
+
 	@Override
 	public double hst(int value) {
-		return value * 0.15;
+		return value * HST;
 	}
 
 }

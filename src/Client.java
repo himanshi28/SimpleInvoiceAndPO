@@ -9,6 +9,8 @@ public class Client {
 	private int number;
 	public ArrayList<Item> items;
 
+	// Constructor which initializes an ArrayList of Class type Item when called,
+	// also generates random invoice number
 	public Client() {
 		this.items = new ArrayList<Item>();
 		this.number = invoiceGenerator();
@@ -26,6 +28,7 @@ public class Client {
 		return this.number;
 	}
 
+	// Random number generator for invoice number
 	public int invoiceGenerator() {
 		int i = 0;
 		int invoiceNumber = 0;
